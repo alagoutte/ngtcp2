@@ -233,6 +233,7 @@ if test "x$werror" != "xno"; then
     # Only work with Clang for the moment
     AX_CHECK_COMPILE_FLAG([-Wheader-guard], [CFLAGS="$CFLAGS -Wheader-guard"])
     AX_CHECK_COMPILE_FLAG([-Wsometimes-uninitialized], [CFLAGS="$CFLAGS -Wsometimes-uninitialized"])
+    AX_CHECK_COMPILE_FLAG([-Wdocumentation], [CFLAGS="$CFLAGS -Wdocumentation"])
 
     # Only work with gcc7 for the moment
     AX_CHECK_COMPILE_FLAG([-Wduplicated-branches], [CFLAGS="$CFLAGS -Wduplicated-branches"])
