@@ -10,6 +10,11 @@ os:
 compiler:
   - clang
   - gcc
+matrix:
+  exclude:
+  # Exclude gcc build (Need some work) with osx
+  - os: osx
+    compiler: gcc
 sudo: required
 addons:
   apt:
