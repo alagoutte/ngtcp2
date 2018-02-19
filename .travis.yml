@@ -54,6 +54,8 @@ script:
   # Now build ngtcp2 examples and test
   - make
   - make check
-  - make ci/gen-certificate.sh
+  - mkdir -p cert
+  - openssl req -newkey rsa:2048 -x509 -nodes -keyout keyfile=cert/server.key -new -out certfile=cert/server.crt -subj /CN=localhost
+#  - make ci/gen-certificate.sh
   - ./examples/server localhost 4433 cert/server.key cert/server.crt &
   - ./examples/client localhost 4433
