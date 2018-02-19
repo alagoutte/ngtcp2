@@ -55,6 +55,8 @@ script:
   - make
   - make check
   - mkdir -p cert
+  - touch cert/server.key
+  - touch cert/server.crt  
   - openssl req -newkey rsa:2048 -x509 -nodes -keyout keyfile=cert/server.key -new -out certfile=cert/server.crt -subj /CN=localhost
 #  - make ci/gen-certificate.sh
   - ./examples/server localhost 4433 cert/server.key cert/server.crt &
