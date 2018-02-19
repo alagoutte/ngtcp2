@@ -57,5 +57,8 @@ script:
 #  - mkdir -p cert
 #  - openssl req -newkey rsa:2048 -x509 -nodes -keyout cert/server.key -new -out cert/server.crt -subj /CN=localhost
   - make ci/gen-certificate.sh
+  - ls -l cert
+  - sh -x ci/gen-certificate.sh
+  - ls -l cert
   - ./examples/server localhost 4433 cert/server.key cert/server.crt &
   - ./examples/client localhost 4433
