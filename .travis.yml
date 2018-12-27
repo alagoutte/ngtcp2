@@ -30,8 +30,6 @@ addons:
     - libssl-dev
     - libev-dev
     - libcunit1-dev
-    - cmake
-    - cmake-data
 before_install:
   - $CC --version
   - if [ "$TRAVIS_OS_NAME" == "linux" ]; then CMAKE_OPTS=" -DENABLE_ASAN=1" AUTOTOOLS_OPTS=" --enable-asan"; fi
