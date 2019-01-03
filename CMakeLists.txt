@@ -120,6 +120,7 @@ else()
   extract_valid_c_flags(WARNCFLAGS
     -Wall
     -Wextra
+    -Wdocumentation
     -Wmissing-prototypes
     -Wstrict-prototypes
     -Wmissing-declarations
